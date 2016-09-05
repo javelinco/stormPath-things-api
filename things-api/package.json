@@ -1,0 +1,19 @@
+{
+  "name": "things-api",
+  "version": "1.0.0",
+  "description": "Client library for accessing stormpath rest api example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javelinco/stormPath-things-api.git"
+  },
+  "author": "Mark Munson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javelinco/stormPath-things-api/issues"
+  },
+  "homepage": "https://github.com/javelinco/stormPath-things-api#readme"
+}

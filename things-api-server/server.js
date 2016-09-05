@@ -2,6 +2,8 @@ var restify = require('restify');
 var stormpathRestify = require('stormpath-restify');
 var stormpathFilters = stormpathRestify.createFilterSet();
 
+var oauthFilter = stormpathFilters.createOauthFilter();
+
 var host = process.env.HOST || '127.0.0.1';
 var port = process.env.PORT || '8080'
 
@@ -22,6 +24,8 @@ server.use(function logger(req, res, next) {
   console.log(new Date(), req.method, req.url);
   next();
 });
+
+server.post('/oauth/token', oauthFilter);
 
 server.on('uncaughtException',function(request, response, route, error) {
   console.error(error.stack);
@@ -45,3 +49,7 @@ server.get('/things/:id', function(req, res, next) {
 server.listen(port, host, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
+
+server.post('/things', [oauthFilter, function (req, res) {
+  res.json(db.createThing(req.body));
+}]);

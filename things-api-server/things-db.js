@@ -34,7 +34,7 @@ module.exports = function createDatabase(options) {
     createThing: function(thing) {
       var newThing = _.extend({
         id: uuid()
-      }.thing);
+      },thing);
       var newRef = things[newThing.id] = newThing;
       return thingAsResource(newRef);
     }
