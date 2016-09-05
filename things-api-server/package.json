@@ -1,0 +1,25 @@
+{
+  "name": "things-api-server",
+  "version": "1.0.0",
+  "description": "https://stormpath.com/blog/build-api-restify-stormpath",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/javelinco/stormPath-things-api.git"
+  },
+  "author": "Mark Munson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javelinco/stormPath-things-api/issues"
+  },
+  "homepage": "https://github.com/javelinco/stormPath-things-api#readme",
+  "dependencies": {
+    "restify": "^4.1.1",
+    "stormpath-restify": "^0.1.0",
+    "underscore": "^1.8.3",
+    "uuid": "^2.0.2"
+  }
+}
